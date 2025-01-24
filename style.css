@@ -45,14 +45,14 @@ body {
 .Navbar-Items {
   display: flex;
   font-size: 13px;
-  color: white;
+  color: blue;
   padding-top: 45px;
   margin-left: 90px;
   letter-spacing: 0.4px;
 }
 
 .Navbar-Items a {
-  color: rgb(224, 223, 223);
+  color: brown;
   font-size: 18px;
   font-weight: 420;
   letter-spacing: 0.6px;
@@ -74,7 +74,7 @@ body {
   margin-top: 130px;
   margin-bottom: 30px;
   font-size: 60px;
-  color: white;
+  color: brown;
   will-change: transform;
   transition: transform 650ms;
 }
@@ -105,7 +105,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   padding-right: 93vh;
-  color: rgb(216, 216, 216);
+  color:black
 }
 
 .buttons-container-1 {
