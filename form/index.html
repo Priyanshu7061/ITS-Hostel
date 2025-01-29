@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback Form</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="form-container">
-    <h1>Project Feedback Form</h1>
-    <form id="feedbackForm">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-      <div class="form-group">
-        <label for="rating">Rating</label>
-        <select id="rating" name="rating" required>
-          <option value="">Select rating</option>
-          <option value="5">5 - Excellent</option>
-          <option value="4">4 - Very Good</option>
-          <option value="3">3 - Good</option>
-          <option value="2">2 - Fair</option>
-          <option value="1">1 - Poor</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="comments">Comments</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Share your feedback"></textarea>
-      </div>
-      <button type="submit">Submit Feedback</button>
-    </form>
-    <div id="responseMessage"></div>
-  </div>
-  <script src="script.js"></script>
+    <div class="feedback-container">
+        <div class="form-header">
+            <h2>We Value Your Feedback</h2>
+            <p>Please take a moment to share your experience with us.</p>
+        </div>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="rating"><i class="fas fa-star"></i> Rating:</label>
+                <div class="rating-stars">
+                    <span data-value="1">&#9733;</span>
+                    <span data-value="2">&#9733;</span>
+                    <span data-value="3">&#9733;</span>
+                    <span data-value="4">&#9733;</span>
+                    <span data-value="5">&#9733;</span>
+                </div>
+                <input type="hidden" id="rating" name="rating" required>
+            </div>
+            <div class="form-group">
+                <label for="comments"><i class="fas fa-comment"></i> Comments:</label>
+                <textarea id="comments" name="comments" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Feedback <i class="fas fa-paper-plane"></i></button>
+            </div>
+        </form>
+        <div id="thankYouMessage" class="hidden">
+            <h3>Thank You! <i class="fas fa-check-circle"></i></h3>
+            <p>We appreciate your feedback and will use it to improve our services.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
