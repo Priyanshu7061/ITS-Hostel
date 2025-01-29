@@ -16,7 +16,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -65,7 +65,8 @@ label i {
 
 input[type="text"],
 input[type="email"],
-textarea {
+textarea,
+input[type="file"] {
   width: 100%;
   padding: 12px;
   border: 2px solid #ddd;
@@ -76,27 +77,55 @@ textarea {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-textarea:focus {
+textarea:focus,
+input[type="file"]:focus {
   border-color: #6a11cb;
   outline: none;
 }
 
-.rating-stars {
+.checkbox-group {
   display: flex;
-  justify-content: space-between;
-  font-size: 24px;
-  color: #ddd;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
   cursor: pointer;
 }
 
-.rating-stars span {
-  transition: color 0.3s ease, transform 0.3s ease;
+.rating-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 8px;
 }
 
-.rating-stars span:hover,
-.rating-stars span.active {
-  color: #ffcc00;
-  transform: scale(1.2);
+.progress {
+  height: 100%;
+  background: #ffcc00;
+  border-radius: 5px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.rating-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.rating-labels span {
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.rating-labels span:hover {
+  color: #6a11cb;
 }
 
 button {

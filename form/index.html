@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Feedback Form</title>
+    <title>Advanced Feedback Form</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,29 +15,57 @@
             <p>Please take a moment to share your experience with us.</p>
         </div>
         <form id="feedbackForm">
+            <!-- Name -->
             <div class="form-group">
                 <label for="name"><i class="fas fa-user"></i> Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
+
+            <!-- Email -->
             <div class="form-group">
                 <label for="email"><i class="fas fa-envelope"></i> Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
+
+            <!-- Feedback Category -->
             <div class="form-group">
-                <label for="rating"><i class="fas fa-star"></i> Rating:</label>
-                <div class="rating-stars">
-                    <span data-value="1">&#9733;</span>
-                    <span data-value="2">&#9733;</span>
-                    <span data-value="3">&#9733;</span>
-                    <span data-value="4">&#9733;</span>
-                    <span data-value="5">&#9733;</span>
+                <label><i class="fas fa-tags"></i> Feedback Category:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="category" value="Service"> Service</label>
+                    <label><input type="checkbox" name="category" value="Product"> Product</label>
+                    <label><input type="checkbox" name="category" value="Support"> Support</label>
+                </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="form-group">
+                <label><i class="fas fa-star"></i> Rating:</label>
+                <div class="rating-bar">
+                    <div class="progress" id="ratingProgress"></div>
+                    <div class="rating-labels">
+                        <span data-value="1">1</span>
+                        <span data-value="2">2</span>
+                        <span data-value="3">3</span>
+                        <span data-value="4">4</span>
+                        <span data-value="5">5</span>
+                    </div>
                 </div>
                 <input type="hidden" id="rating" name="rating" required>
             </div>
+
+            <!-- Comments -->
             <div class="form-group">
                 <label for="comments"><i class="fas fa-comment"></i> Comments:</label>
                 <textarea id="comments" name="comments" rows="5" required></textarea>
             </div>
+
+            <!-- File Upload -->
+            <div class="form-group">
+                <label for="file"><i class="fas fa-paperclip"></i> Attach File (Optional):</label>
+                <input type="file" id="file" name="file">
+            </div>
+
+            <!-- Submit Button -->
             <div class="form-group">
                 <button type="submit">Submit Feedback <i class="fas fa-paper-plane"></i></button>
             </div>
